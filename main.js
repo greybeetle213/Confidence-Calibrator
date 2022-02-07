@@ -1,9 +1,9 @@
 function loop(){
     ctx.drawImage(backdrop,-2*unit,-2*unit,1333*unit,1000*unit)
     ctx.fillStyle = "black"
-    ctx.font = '30px serif'
+    ctx.font = Math.round(40*unit) + 'px serif'
     ctx.fillText(currentQuestion[0], 150*unit, 610*unit)
-    ctx.font = '200px serif'
+    ctx.font = Math.round(280*unit) + 'px serif'
     switch(avaragePointsLost){
         case Infinity:
             ctx.fillText("∞", 550*unit, 450*unit)
@@ -14,7 +14,7 @@ function loop(){
         default:
             ctx.fillText(String(avaragePointsLost).slice(0,4), 420*unit, 450*unit)
     }
-    ctx.font = '50px serif'
+    ctx.font = Math.round(35*unit) + 'px serif'
     if(pointsLostText[2] > 0){
         if(pointsLostText[0] != "-Infi"){
             if(Number(pointsLostText[0]) < -1){
